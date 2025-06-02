@@ -3,12 +3,12 @@ const app = express();
 const cors = require('cors');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-app.use(express.urlencoded({
-  extended: true
-}));
+// app.use(express.urlencoded({
+//   extended: true
+// }));
 
 app.use(cors());
-app.use(express.json())
+// app.use(express.json())
 const PORT = 4900;
 
 let target = 'http://82.112.240.121:4000'
