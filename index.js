@@ -14,12 +14,12 @@ const PORT = 4900;
 let target = 'http://82.112.240.121:4000'
 target = 'http://localhost:4000'
 // Middleware for download audio requests
-app.use('/file', createProxyMiddleware({
+app.use('/audsvr', createProxyMiddleware({
   target , // Target for the first app
   changeOrigin: true,
   pathRewrite: {
-      '^/file': '', // Remove the /api/backend-social-poster prefix
-  },
+      '^/audsvr': '', // Remove the /api/backend-social-poster prefix
+  },    
 }));
 
 
