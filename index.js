@@ -9,7 +9,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 app.use(cors());
 // app.use(express.json())
-const PORT = 4900;
+const PORT = process.env.PORT || 3000;
 
 let target = 'http://82.112.240.121:4000'
 // target = 'http://localhost:4000'
